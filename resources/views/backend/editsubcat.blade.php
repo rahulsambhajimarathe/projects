@@ -25,7 +25,7 @@
                 <div class="white_card_header">
                     <div class="box_header m-0">
                         <div class="main-title">
-                            <h3 class="m-0">create category</h3>
+                            <h3 class="m-0">Edit Sub category</h3>
                         </div>
                     </div>
                 </div>

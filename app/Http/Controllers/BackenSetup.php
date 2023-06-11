@@ -34,42 +34,14 @@ class BackenSetup extends Controller
         // return view('backend/editpost');
         return $id;
     }
-    function tags(){
-        return view('/backend/tags');
-    }
     function gallery(){
         return view('/backend/gallery');
     }
-    function category(){
-        return view('/backend/categoryList');
-    }
-    function createcategory(){
-        return view('/backend/createcategory');
-    }
-    function postcreatecategory(Request $id){
-        return $id;
-    }
-    function editcategory(Request $id){
-        return view('/backend/createcategory');
-    }
-    function posteditcategory(Request $id){
-        return $id;
-    }
-    function subcategorylist(Request $id){
-        return view('/backend/subcategoryList');
-    }
-    function subcategorycreate(Request $id){
-        return view('/backend/createsub');
-    }
-    function postsubcategorycreate(Request $id){
-        return $id;
-    }
-    function editsub(Request $id){
-        return view('/backend/editsubcat');
-    }
-    function saveeditsub(Request $id){
-        return $id;
-    }
+
+
+
+    
+
     function cmtlist(Request $id){
         return view('/backend/commentlist');
         // return $id;

@@ -45,13 +45,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-light">
-                                        <th scope="row">1001</th>
-                                        <td>News</td>
-                                        <td>1</td>
-                                        <td><i class="ti-pencil-alt"></i> Edit</td>
-                                        <td><i class="ti-trash"></i>Delete</td>
-                                    </tr>
+                                    @foreach($data as $one)
+                                        <tr class="table-light">
+                                            <th scope="row">{{$one["id"]}}</th>
+                                            <td>{{$one["cat_name"]}}</td>
+                                            @if($one["cat_status"] == "1")
+                                                <td class="text-success">active</td>
+                                            @else
+                                                <td class="text-danger">Unactive</td>
+                                            @endif
+                                            <td><a class="text-dark" href="/backend/edit_category/{{$one['id']}}"><i class="ti-pencil-alt"></i> Edit</a></td>
+                                            <td><a class="text-dark" href="/backend/delte_category/{{$one['id']}}"><i class="ti-trash"></i>Delete</a></td>
+                                        </tr>
+                                    @endforeach
+
+                                    <!-- {{print_r(gettype($one["status"])."<br>")}} -->
+
                                 </tbody>
                             </table>
                         </div>

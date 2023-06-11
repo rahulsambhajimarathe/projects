@@ -17,11 +17,14 @@
         </div>
     </div>
     <div class="white_card_body">
-        <form>
+        <form method="post" enctype="multipart/form-data" action="/backend/tags/add">
+        @csrf
         <div class="mb-3">
           <label for="" class="form-label">Create Tags</label>
-          <input type="text"
-            class="form-control" name="tag_name" id="" aria-describedby="helpId" placeholder="enter tag name">
+            <input type="text" class="form-control" name="tagname" placeholder="enter tag name" >
+
+            <input type="submit" class="btn btn-success mt-3" name="submit" value="submit" aria-describedby="helpId" placeholder="enter tag name">
+
           <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
         </div>
         </form>
@@ -39,24 +42,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                    
+                    @foreach($taglist as $one)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <th scope="row">{{$one['id']}}</th>
+                        <td>{{$one['tag_name']}}</td>
+                        <td>{{$one['created_at']}}</td>
+                        <td>
+                            <a href="/backend/tags/{{$one['id']}}">delete</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

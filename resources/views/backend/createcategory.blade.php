@@ -34,16 +34,13 @@
                     <form method="post" action="/backend/create_category">
                         @csrf
                         <div class="mb-3">
-                            <label class="form-label" for="exampleInputEmail1">Email address</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <label class="form-label" for="exampleInputEmail1">Create Categories</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Create Categories" name="cat_name">
                         </div>
                         <div class="mb-3">
                             <div class=" mb-3">
                             <label class="form-label" for="inputGroupSelect01">category Status</label>
-                                <select class="form-select" id="inputGroupSelect01" name="status">
-                                    <option selected="" value="0">0</option>
-                                    <option value="1">1</option>
-                                </select>
+                                <input type="checkbox" class="" id="exampleInputEmail1" aria-describedby="emailHelp" value="1" placeholder="Create Categories" name="cat_status">
                             </div>
                         </div>
                         <input value="Submit" name="submit"  type="submit" class="btn btn-primary" >

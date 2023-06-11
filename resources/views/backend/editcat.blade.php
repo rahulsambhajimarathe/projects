@@ -31,19 +31,17 @@
                 </div>
                 <div class="white_card_body">
                     <!-- <h6 class="card-subtitle mb-2">Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading for documentation on required classes, form layout, and more.</h6> -->
-                    <form method="post" action="/backend/create_category">
+                    <form method="post" action="{{url('/')}}/backend/edit_categorymain/{{$data['id']}}">
                         @csrf
+                        <!-- @method('PUT') -->
                         <div class="mb-3">
                             <label class="form-label" for="exampleInputEmail1">Email address</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="{{$data['cat_name']}}" name="catname">
                         </div>
                         <div class="mb-3">
                             <div class=" mb-3">
                             <label class="form-label" for="inputGroupSelect01">category Status</label>
-                                <select class="form-select" id="inputGroupSelect01" name="status">
-                                    <option selected="" value="0">0</option>
-                                    <option value="1">1</option>
-                                </select>
+                                <input type="checkbox" class="" id="exampleInputEmail1" aria-describedby="emailHelp" value="1" placeholder="Create Categories" name="cat_status">
                             </div>
                         </div>
                         <input value="Submit" name="submit"  type="submit" class="btn btn-primary" >
@@ -53,7 +51,7 @@
         </div>
     </div>
 </div>
-
+{{print_r($data)}}
 <div class="footer_part">
     <div class="container-fluid">
         <div class="row">

@@ -38,7 +38,7 @@
                 <ul>
                     <li><a href="{{url('/')}}/backend/all_category">All category</a></li>
                     <li><a href="{{url('/')}}/backend/create_category">Create category</a></li>
-                    <li><a href="{{url('/')}}/backend/edit_category">Edit category</a></li>
+                    <!-- <li><a href="{{url('/')}}/backend/edit_category">Edit category</a></li> -->
                     <!-- <li><a href="{{url('/')}}/backend/recovry_category">Recovry category</a></li> -->
                 </ul>
             </li>
@@ -75,7 +75,7 @@
                     <li><a href="{{url('/')}}/backend/comment_list">Comment List</a></li>
                     <li><a href="{{url('/')}}/backend/comment_unpublish">comment unpublish</a></li>
                     <li><a href="{{url('/')}}/backend/comment_publish">comment publish</a></li>
-                    <li><a href="{{url('/')}}/backend/comment_list">Comment Reply</a></li>
+                    <!-- <li><a href="{{url('/')}}/backend/comment_list">Comment Reply</a></li> -->
                     <!-- <li><a href="{{url('/')}}/backend/comment_delete_recovry">comment Delete Recovry</a></li> -->
                 </ul>
             </li>

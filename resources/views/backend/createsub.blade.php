@@ -36,11 +36,13 @@
                             <div class=" mb-3">
                                 <label class="form-label" for="inputGroupSelect01">category Status</label>
                                 <select class="form-select" id="inputGroupSelect01" name="cat_name">
-                                    <option selected="" value="categories 1">categories 1</option>
-                                    <option value="categories 2">categories 2</option>
+                                    @foreach($data as $cat)
+                                    <option selected="" value="cat_{{$cat['id']}}">{{$cat["cat_name"]}} , Status({{$cat["cat_status"]}})</option>
+                                    <!-- <option value="categories 2">categories 2</option>
                                     <option value="categories 3">categories 3</option>
                                     <option value="categories 4">categories 4</option>
-                                    <option value="categories 5">categories 5</option>
+                                    <option value="categories 5">categories 5</option> -->
+                                    @endforeach
                                 </select>
                             </div>
                      
@@ -58,15 +60,12 @@
                     <!-- <h6 class="card-subtitle mb-2">Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading for documentation on required classes, form layout, and more.</h6> -->
                         <div class="mb-3">
                             <label class="form-label" for="exampleInputEmail1">create_sub_category</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="create_sub_category">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="create_sub_category" name="sub_cat_name">
                         </div>
                         <div class="mb-3">
                             <div class=" mb-3">
                             <label class="form-label" for="inputGroupSelect01">category Status</label>
-                                <select class="form-select" id="inputGroupSelect01" name="status">
-                                    <option selected="" value="0">0</option>
-                                    <option value="1">1</option>
-                                </select>
+                                <input type="checkbox" class="" id="exampleInputEmail1" aria-describedby="emailHelp" value="1" placeholder="Create Categories" name="cat_status">
                             </div>
                         </div>
                         <input value="Submit" name="submit"  type="submit" class="btn btn-primary" >
@@ -76,6 +75,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="footer_part">
     <div class="container-fluid">

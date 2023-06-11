@@ -4,7 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontendurl;
 use App\Http\Controllers\BackenSetup;
-use App\Http\Controllers\Tags;
+use App\Http\Controllers\TagsController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +39,57 @@ Route::middleware('auth')->group(function () {
     Route::patch('/backend/admin_info', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/backend/admin_info', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-        
+
+                        // ======this is tags creation and deletion ==========//
+    // tags
+    Route::get("/backend/tags", [TagsController::class, "tagsm"]);
+    // tags add
+    Route::post("/backend/tags/add", [TagsController::class, "create_tags"]);
+    // tag delete
+    Route::get("/backend/tags/{id}", [TagsController::class, "delete_tags"]);
+
+
+    
+
+                        // ======This is for category======//
+    // category list
+    Route::get("/backend/all_category", [CategoryController::class, "category"]);
+
+
+    // category create
+    Route::get("/backend/create_category", [CategoryController::class, "createcategory"]);
+    Route::post("/backend/create_category", [CategoryController::class, "postcreatecategory"]);
+
+    // category edit
+    Route::get("/backend/edit_category/{id}", [CategoryController::class, "editcategory"]);
+    Route::post("/backend/edit_categorymain/{id}", [CategoryController::class, "posteditcategory"]);
+
+    // delte_category
+    Route::get("/backend/delte_category/{id}", [CategoryController::class, "deletecategory"]);
+
+
+                        // === This is Sub category === //    
+    // sub category list
+    Route::get("/backend/all_sub_category", [SubCategoryController::class, "subcategorylist"]);
+
+    // create sub category
+    Route::get("/backend/create_sub_category", [SubCategoryController::class, "subcategorycreate"]);
+    Route::post("/backend/create_sub_category", [SubCategoryController::class, "postsubcategorycreate"]);
+
+    // edit sub category
+
+    Route::get("/backend/sub_edit_category", [SubCategoryController::class, "editsub"]);
+    Route::post("/backend/sub_edit_category", [SubCategoryController::class, "saveeditsub"]);
+
+
+
+
     //backend routes
-    Route::get("/admin_login", [BackenSetup::class, "adminlogin"]);
+    // Route::get("/admin_login", [BackenSetup::class, "adminlogin"]);
+
+
+
+
 
     // admin panle routes
     Route::get("/backend", [BackenSetup::class, "setup"]);
@@ -58,34 +108,17 @@ Route::middleware('auth')->group(function () {
     Route::get("backend/edit_post", [BackenSetup::class, "editpost"]);
     Route::post("backend/edit_post/data", [BackenSetup::class, "editdata"]);
 
-    // tags
-    Route::get("/backend/tags", [BackenSetup::class, "tags"]);
+
+    
+
 
     // gallery
     Route::get("/backend/gallery", [BackenSetup::class, "gallery"]);
-
-    // category list
-    Route::get("/backend/all_category", [BackenSetup::class, "category"]);
-    // category create
-    Route::get("/backend/create_category", [BackenSetup::class, "createcategory"]);
-    Route::post("/backend/create_category", [BackenSetup::class, "postcreatecategory"]);
-
-    // category edit
-    Route::get("/backend/edit_category", [BackenSetup::class, "editcategory"]);
-    Route::post("/backend/create_category", [BackenSetup::class, "posteditcategory"]);
+    
 
 
-    // sub category list
-    Route::get("/backend/all_sub_category", [BackenSetup::class, "subcategorylist"]);
 
-    // create sub category
-    Route::get("/backend/create_sub_category", [BackenSetup::class, "subcategorycreate"]);
-    Route::post("/backend/create_sub_category", [BackenSetup::class, "postsubcategorycreate"]);
 
-    // edit sub category
-
-    Route::get("/backend/sub_edit_category", [BackenSetup::class, "editsub"]);
-    Route::post("/backend/sub_edit_category", [BackenSetup::class, "saveeditsub"]);
 
 
 
