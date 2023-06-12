@@ -31,13 +31,13 @@
                 </div>
                 <div class="white_card_body">
                     <!-- <h6 class="card-subtitle mb-2">Here’s a quick example to demonstrate Bootstrap’s form styles. Keep reading for documentation on required classes, form layout, and more.</h6> -->
-                    <form method="post" action="/backend/create_sub_category">
+                    <form method="POST" action="/backend/create_sub_category" enctype="multipart/form-data" name="form_data">
                         @csrf
                             <div class=" mb-3">
-                                <label class="form-label" for="inputGroupSelect01">category Status</label>
+                                <label class="form-label" for="inputGroupSelect01">category </label>
                                 <select class="form-select" id="inputGroupSelect01" name="cat_name">
                                     @foreach($data as $cat)
-                                    <option selected="" value="cat_{{$cat['id']}}">{{$cat["cat_name"]}} , Status({{$cat["cat_status"]}})</option>
+                                    <option selected="" value="{{$cat['id']}}">{{$cat["cat_name"]}} , Status({{$cat["cat_status"]}})</option>
                                     <!-- <option value="categories 2">categories 2</option>
                                     <option value="categories 3">categories 3</option>
                                     <option value="categories 4">categories 4</option>

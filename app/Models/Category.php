@@ -9,9 +9,8 @@ class Category extends Model
 {
     use HasFactory;
     // Relationships
-
-    public function category()
+    public function cat()
     {
-        return $this->belongsTo(SubCategory::class);
+        return $this->hasMany(SubCategory::class);
     }
 }
