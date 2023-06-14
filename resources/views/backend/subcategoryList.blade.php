@@ -189,7 +189,7 @@
                 </div>
             </div>
         </div>
-
+<!-- <pre>{{print_r($one)}}</pre> -->
         <div class="footer_part">
             <div class="container-fluid">
                 <div class="row">

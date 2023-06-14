@@ -10,7 +10,35 @@ class SubCategoryController extends Controller
 {
     //
     function subcategorylist(){
-        return view('/backend/subcategoryList');
+        $data = SubCategory::all()->toArray();
+        for($i=0; $i<count($data); $i++ ){
+            // echo ;
+            $data2[] = Category::find($data[$i]['category_id'])->toArray();
+            // $subcategories = SubCategory::with('Category')->get();
+        }
+        // $data["category_id"];
+
+        // foreach ($subcategories as $subcategory) {
+        //     $categoryName = $subcategory->Category->cat_name;
+        //     // Do something with the category name
+        // }
+
+        // $data1 = SubCategory::find("category_id");
+        // $catName = $data1->category->cat_name;
+        // return $data."\n"."\n".$data1;
+        // $data["id"] = $data;
+        // $data["cat_name"] = 'one';
+        // $data["cat_sub_name"] = 'one';
+        // $data["category_id"] = 'one';
+        // echo "<pre>";
+        // // print_r($data);
+        // // echo count($data);
+        // print_r($data);
+        // // print_r($data2);
+        // // print_r($data['category_id']);
+        // // print_r($catName);
+        // echo "</pre>";
+        return view('/backend/subcategoryList', ["one"=>$data, "category"=>$data2]);
     }
 
 
@@ -18,6 +46,7 @@ class SubCategoryController extends Controller
     // get method table create Sub category
     function subcategorycreate(){
         $one = Category::all()->toArray();
+        
         return view('/backend/createsub', ["data" => $one]);
         // return $one;
     }
