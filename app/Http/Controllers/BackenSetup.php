@@ -34,9 +34,7 @@ class BackenSetup extends Controller
         // return view('backend/editpost');
         return $id;
     }
-    function gallery(){
-        return view('/backend/gallery');
-    }
+
 
 
 

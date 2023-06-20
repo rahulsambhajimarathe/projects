@@ -10,12 +10,12 @@ class SubCategoryController extends Controller
 {
     //
     function subcategorylist(){
-        $data = SubCategory::all()->toArray();
-        for($i=0; $i<count($data); $i++ ){
-            // echo ;
-            $data2[] = Category::find($data[$i]['category_id'])->toArray();
-            // $subcategories = SubCategory::with('Category')->get();
-        }
+        $data = Category::with("cat")->get()->toArray();
+        // for($i=0; $i<count($data); $i++ ){
+        //     // echo ;
+        //     $data2[] = Category::find($data[$i]['category_id'])->toArray();
+        //     // $subcategories = SubCategory::with('Category')->get();
+        // }
         // $data["category_id"];
 
         // foreach ($subcategories as $subcategory) {
@@ -38,7 +38,8 @@ class SubCategoryController extends Controller
         // // print_r($data['category_id']);
         // // print_r($catName);
         // echo "</pre>";
-        return view('/backend/subcategoryList', ["one"=>$data, "category"=>$data2]);
+            // return $data;
+        return view('/backend/subcategoryList', ["all" => $data]);
     }
 
 

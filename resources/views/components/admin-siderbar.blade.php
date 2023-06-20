@@ -79,18 +79,36 @@
                     <!-- <li><a href="{{url('/')}}/backend/comment_delete_recovry">comment Delete Recovry</a></li> -->
                 </ul>
             </li>
+            <li class>
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <div class="ti-gallery">
+                        <!-- <img src="/img/menu-icon/6.svg" alt> -->
+                    </div>
+                    <div class="nav_title">
+                        <span>Gallery</span>
+                    </div>
+                </a>
+                <ul>
+                    <li><a href="{{url('/')}}/backend/gallery">Gallery</a></li>
+                    <li><a href="{{url('/')}}/backend/gallery/feature">Feature Image</a></li>
+                    <li><a href="{{url('/')}}/backend/gallery/gallery">Gallery Image</a></li>
+                    <!-- <li><a href="{{url('/')}}/backend/comment_list">Comment Reply</a></li> -->
+                    <!-- <li><a href="{{url('/')}}/backend/comment_delete_recovry">comment Delete Recovry</a></li> -->
+                </ul>
+            </li>
 
             <!-- gallery  -->
-            <li class>
+            <!-- <li class>
                 <a href="{{url('/')}}/backend/gallery" aria-expanded="false">
                     <div class="ti-gallery">
-                        <!-- <img src="/img/menu-icon/5.svg" alt> -->
+                        comments this gallery img
+                         <img src="/img/menu-icon/5.svg" alt> 
                     </div>
                     <div class="nav_title">
                         <span>gallery</span>
                     </div>
                 </a>
-            </li>
+            </li> -->
             <!-- tags -->
             <li class>
                 <a href="{{url('/')}}/backend/tags" aria-expanded="false">

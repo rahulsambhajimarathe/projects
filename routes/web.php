@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontendurl;
 use App\Http\Controllers\BackenSetup;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\SubCategoryController;
 
 /*
@@ -113,7 +114,17 @@ Route::middleware('auth')->group(function () {
 
 
     // gallery
-    Route::get("/backend/gallery", [BackenSetup::class, "gallery"]);
+    Route::get("/backend/gallery", [GalleryController::class, "gallery"]);
+
+    //gallery/feature
+    Route::get("/backend/gallery/feature", [GalleryController::class, "feature_gallery"]);
+    //gallery/feature //post
+    Route::post("/backend/gallery/feature", [GalleryController::class, "feature_post_gallery"]);
+
+    //gallery/feature
+    Route::get("/backend/gallery/gallery", [GalleryController::class, "gallery_gallery"]);
+    //gallery/feature //post
+    Route::post("/backend/gallery/gallery", [GalleryController::class, "gallery_post_gallery"]);
     
 
 

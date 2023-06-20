@@ -52,6 +52,7 @@
                                                     <th scope="col">Sub cat id</th>
                                                     <th scope="col">Sub Cat name</th>
                                                     <th scope="col">Cat name</th>
+                                                    <th scope="col">cat id</th>
                                                     <th scope="col">Status</th>
                                                     <th scope="col">Edit</th>
                                                     <th scope="col">Delet</th>
@@ -62,125 +63,26 @@
                                                     <td> <i class="ti-id-badge"> </i>  1</td>
                                                     <td> <i class=" ti-notepad"> </i>sub cat name</td>
                                                     <td> <i class=" ti-notepad"> </i>cat name</td>
+                                                    <td> <i class="ti-id-badge"> </i>cat id name</td>
                                                     <td> <i class="ti-lock"></i> True</td>
                                                     <!-- <td>-</td> -->
                                                     <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
                                                     <td><i class="ti-trash"></i>Delete</td>
                                                     <!-- <td><a href="#" class="status_btn">New</a></td>
                                                     <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 2</td>
-                                                    <td> <i class=" ti-notepad"> </i>news</td>
-                                                    <td> <i class=" ti-notepad"> </i>war</td>
-                                                    <td> <i class="ti-unlock"></i> False</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 3</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn ">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 4</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 5</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 6</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i>  9</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i>  7</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td>  <i class="ti-id-badge"> </i>  8</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i>  10</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i>  11</td>
-                                                    <td> <i class=" ti-notepad"> </i>sub cat name</td>
-                                                    <td> <i class=" ti-notepad"> </i>cat name</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
+                                                    <pre>
+                                                        @for($i = 0; $i < count($all); $i++)
+                                                            @foreach($all[$i]["cat"] as $one)
+                                                                {{print_r($one)}}
+                                                            @endforeach
+                                                        @endfor
+                                                    </pre>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <pre>
+                                            {{print_r($all["cat_name"])}}
+                                        </pre>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +91,8 @@
                 </div>
             </div>
         </div>
-<!-- <pre>{{print_r($one)}}</pre> -->
+
+
         <div class="footer_part">
             <div class="container-fluid">
                 <div class="row">

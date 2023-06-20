@@ -40,6 +40,12 @@
                             <h4 class="mb-2 nowrap ">Gallery </h4>
                         </div>
                     </div>
+                    <pre>
+                    </pre>
+                    @foreach ($one as $two)
+                        <img src="./{{asset('storage/app/public/uploads/feature/')}}/{{ $two['name'] }}" class="img-fluid rounded-top w-100" alt="">
+                    @endforeach
+
                     <div class="box_body">
                         <div class="row photo_gallery justify-content-center" itemscope>
                             <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
@@ -114,7 +120,7 @@
                             </figure>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
