@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Feature;
 use Illuminate\Support\Facades\Storage;
+
 class GalleryController extends Controller
 {
     //
@@ -18,18 +18,38 @@ class GalleryController extends Controller
         return view('/backend/feature');
     }
     function feature_post_gallery(Request $request){
-        // return $request["feature_image"];
         $data = new Feature;
-        $filename =  $filename = time()."-blog"."-".$request['feature_img_name'].".".$request->file("feature_image")->getClientOriginalExtension();
-
-        $request->file("feature_image")->storeAs("public/uploads/feature", $filename);
+        // $publicPath = public_path();
+        $filename = time()."-blog"."-".$request['feature_img_name'].".".$request->file("feature_image")->getClientOriginalExtension();
+        $filePath = Storage::public_path("uploads/feature/".$filename);
+        // $store = Storage::disk('\public\uploads\feature')->put($filename, 'Contents');
+        $store = Storage::put($filePath, $filename);
+        // $request->file("feature_image")->storeAs("storage/uploads/feature", $filename);
 
         $data->name = $filename;
-        $data->location_with_name = "/public/uploads/feature";
-        $data->save();
-        // return $request["feature_image"];
+        $data->location_with_name = "/storage/uploads/feature/";
+        // $data->save();
+
+        echo "<pre>";
+        print_r($filePath);
+        echo "<br>";
+        echo "<br>";
+
+        echo "<br>";
+
+        print_r($filename);
+        echo "<br>";
+
+        echo "<br>";
+        // print_r($publicPath);
+        echo "</pre>";
         // return view('/backend/feature');
+        // return response()->file($filePath);
     }
+
+
+
+
 
 
     //gallery img

@@ -43,9 +43,8 @@
                     <pre>
                     </pre>
                     @foreach ($one as $two)
-                        <img src="./{{asset('storage/app/public/uploads/feature/')}}/{{ $two['name'] }}" class="img-fluid rounded-top w-100" alt="">
+                        <img src="{{asset('storage/uploads/feature/')}}/1687340548-blog-Rahul.jpg" class="img-fluid rounded-top w-25" alt="">
                     @endforeach
-
                     <div class="box_body">
                         <div class="row photo_gallery justify-content-center" itemscope>
                             <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
