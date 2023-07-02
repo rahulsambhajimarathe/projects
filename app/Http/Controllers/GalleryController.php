@@ -3,67 +3,66 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Feature;
+use App\Models\Gallery;
 use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
-    //
+    //this is gallery image show page controller gallery model  and features controller is here for show image in gallery page
+
     function gallery(){
-        $one = Feature::all();        // return $one;
-        return view('/backend/gallery', compact('one'));
+        $image = Feature::all();
+        $gallery = Gallery::all();
+        return view('/backend/gallery', ["data" => $image, "gallery" => $gallery]);
     }
 
-        //features image
+    //=======================================================================================================//
+
+    // this is feature_gallery images get controller
     function feature_gallery(){
         return view('/backend/feature');
     }
+
+
+    // this is feature_gallery images post controller
     function feature_post_gallery(Request $request){
         $data = new Feature;
-        // $publicPath = public_path();
-        $filename = time()."-blog"."-".$request['feature_img_name'].".".$request->file("feature_image")->getClientOriginalExtension();
-        $filePath = Storage::public_path("uploads/feature/".$filename);
-        // $store = Storage::disk('\public\uploads\feature')->put($filename, 'Contents');
-        $store = Storage::put($filePath, $filename);
-        // $request->file("feature_image")->storeAs("storage/uploads/feature", $filename);
+        // $filename = time()."-blog"."-".$request['feature_img_name'].".".$request->file("feature_image")->getClientOriginalExtension();
+        $filename = $request->file("feature_image")->getClientOriginalName();
 
+        $filename = time()."-blog"."-".$request['feature_img_name'].$filename;
+        $one = $request->file('feature_image')->storeAs("public/image/feature", $filename);
         $data->name = $filename;
-        $data->location_with_name = "/storage/uploads/feature/";
-        // $data->save();
 
-        echo "<pre>";
-        print_r($filePath);
-        echo "<br>";
-        echo "<br>";
-
-        echo "<br>";
-
-        print_r($filename);
-        echo "<br>";
-
-        echo "<br>";
-        // print_r($publicPath);
-        echo "</pre>";
-        // return view('/backend/feature');
-        // return response()->file($filePath);
+        $data->location_with_name = $one;
+        $data->save();
+        return redirect()->back();
     }
 
+    //=======================================================================================================//
 
-
-
-
-
-    //gallery img
+    //gallery image add page get method controller
     function gallery_gallery(){
         return view('/backend/gallery_add');
     }
+
+    //gallery image add page post method controller
     function gallery_post_gallery(Request $request){
         // echo "<pre>";
         // echo print_r($request->all());
+        $data = new Gallery;
 
-        $filename = time()."-blog"."-".$request['gallery_img_name'].".".$request->file("gallery")->getClientOriginalExtension();
-        $request->file("gallery")->storeAs("public/uploads/gallery", $filename);
-        // return $request["feature_image"];
+        $filename = $request->file("gallery")->getClientOriginalName();
 
-        return view('/backend/gallery_add');
+        $filename = time()."-blog"."-".$request['gallery_img_name'].$filename;
+        $one = $request->file('gallery')->storeAs("public/image/gallery", $filename);
+        $data->name = $filename;
+
+        $data->location = $one;
+        $data->save();
+
+        return redirect()->back();
+
+        // return view('/backend/gallery_add');
     }
 }

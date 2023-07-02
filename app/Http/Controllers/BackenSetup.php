@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class BackenSetup extends Controller
 {
     //
+
+
+    // this is backend dashboard page
     function setup(){
         return view('backend/dashboard');
     }
-    function adminlogin(){
-        return view('backend/login');
-    }
+
     function allpost(){
         return view('backend/postlist');
     }
@@ -38,7 +40,7 @@ class BackenSetup extends Controller
 
 
 
-    
+
 
     function cmtlist(Request $id){
         return view('/backend/commentlist');

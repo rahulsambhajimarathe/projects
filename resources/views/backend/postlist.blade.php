@@ -3,7 +3,7 @@
 
 
     <section class="main_content dashboard_part large_header_bg">
- 
+
         <div class="container-fluid g-0">
             <div class="row">
                 <div class="col-lg-12 p-0 ">
@@ -169,145 +169,47 @@
                                                     <th scope="col">Post Id</th>
                                                     <th scope="col">Title</th>
                                                     <th scope="col">Status</th>
-                                                    <th scope="col">Autohor</th>
+                                                    <th scope="col">Category</th>
+                                                    <th scope="col">Tags</th>
                                                     <th scope="col">Post Date</th>
                                                     <th scope="col">Edit</th>
                                                     <th scope="col">Delet</th>
+                                                    <!-- <th scope="col">Autohor</th> -->
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i>  1</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 2</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-unlock"></i> False</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 3</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn ">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 4</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 5</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i> 6</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i>  9</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i>  7</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td>  <i class="ti-id-badge"> </i>  8</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
-                                                    <td> <i class="ti-id-badge"> </i>  10</td>
-                                                    <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
-                                                    <td> <i class="ti-lock"></i> True</td>
-                                                    <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
-                                                    <td><i class="ti-calendar"> </i> 30-5-2023</td>
-                                                    <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
-                                                    <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
-                                                <tr>
+                                                @foreach($data as $list)
+                                                    <tr>
+                                                        <td> <i class="ti-id-badge"> </i> {{ $list["id"]}}</td>
+                                                        <td> <i class=" ti-notepad"> </i> {{$list["title"]}}</td>
+                                                        <!-- <td> <i class="ti-lock"></i> {{$list["status"]}}</td> -->
+                                                        <td> @if( $list["status"] == "Public")
+                                                                <i class="ti-lock text-success"></i> <span class="text-success">{{$list["status"]}}</span>
+                                                            @else
+                                                                 <i class="ti-lock text-danger"></i> <span class="text-danger">{{$list["status"]}}</span>
+                                                            @endif
+                                                        </td>
+                                                        <td> <i class="ti-layers"></i> {{ $list["category"] }}</td>
+                                                        <td> <i class="ti-layers"></i> {{ $list["tags"] }}</td>
+                                                        <td><i class="ti-calendar"> </i>  {{ $list["date"] }}</td>
+                                                        <td><a href="/backend/edit_post/{{ $list['id'] }}" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
+                                                        <td><a href="/backend/delete_post/{{ $list['id'] }}" class="text-decoration text-danger"><i class="ti-trash"></i>Delete</a></td>
+                                                        <!-- <td><i class="ti-user"></i> Vignesh </td> -->
+                                                    </tr>
+                                                @endforeach
+
+                                                <!-- <tr>
                                                     <td> <i class="ti-id-badge"> </i>  11</td>
                                                     <td> <i class=" ti-notepad"> </i> This is basical Title i am rahul marathe i am a boy i live india</td>
                                                     <td> <i class="ti-lock"></i> True</td>
                                                     <td><i class="ti-user"></i> Vignesh </td>
-                                                    <!-- <td>-</td> -->
+                                                     <td>-</td>
                                                     <td><i class="ti-calendar"> </i> 30-5-2023</td>
                                                     <td><a href="/backend/edit_post" class="text-decoration"><i class="ti-pencil-alt"></i> Edit</a></td>
                                                     <td><i class="ti-trash"></i>Delete</td>
-                                                    <!-- <td><a href="#" class="status_btn">New</a></td>
-                                                    <td>-</td> -->
-                                                </tr>
+                                                    <td><a href="#" class="status_btn">New</a></td>
+                                                    <td>-</td>
+                                                </tr> -->
                                             </tbody>
                                         </table>
                                     </div>
@@ -318,7 +220,6 @@
                 </div>
             </div>
         </div>
-
         <div class="footer_part">
             <div class="container-fluid">
                 <div class="row">

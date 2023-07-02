@@ -8,6 +8,7 @@ use App\Http\Controllers\TagsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\SubCategoryController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +24,18 @@ use App\Http\Controllers\SubCategoryController;
 
 
 Route::get('/', [Frontendurl::class, 'index']);
+
+Route::get('/latest-post/{slug}', [Frontendurl::class, 'latestpost']);
+Route::get('/post/{slug}', [Frontendurl::class, 'postpage']);
+
 Route::get('/about', [Frontendurl::class, 'about']);
 Route::get('/contact', [Frontendurl::class, 'contact']);
-Route::get('/latest-post', [Frontendurl::class, 'latestpost']);
-Route::get('/category', [Frontendurl::class, 'category']);
+
+Route::get('/category/', [Frontendurl::class, 'category']);
+Route::get('/category/{id}', [Frontendurl::class, 'particcularcategory']);
+
+// Route::post('/search-result/{search}', [Frontendurl::class, 'particcularcategory']);
+
 
 
 
@@ -41,18 +50,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/backend/admin_info', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
-                        // ======this is tags creation and deletion ==========//
+                        // ======this is tags creation and deletion start ==========//
     // tags
     Route::get("/backend/tags", [TagsController::class, "tagsm"]);
     // tags add
     Route::post("/backend/tags/add", [TagsController::class, "create_tags"]);
     // tag delete
     Route::get("/backend/tags/{id}", [TagsController::class, "delete_tags"]);
+                        // ======this is tags creation and deletion end ==========//
 
 
-    
 
-                        // ======This is for category======//
+                        // ======This is for category start======//
     // category list
     Route::get("/backend/all_category", [CategoryController::class, "category"]);
 
@@ -68,8 +77,11 @@ Route::middleware('auth')->group(function () {
     // delte_category
     Route::get("/backend/delte_category/{id}", [CategoryController::class, "deletecategory"]);
 
+                         // ======This is for category end======//
 
-                        // === This is Sub category === //    
+
+
+                        // === This is Sub category start === //
     // sub category list
     Route::get("/backend/all_sub_category", [SubCategoryController::class, "subcategorylist"]);
 
@@ -81,36 +93,42 @@ Route::middleware('auth')->group(function () {
 
     Route::get("/backend/sub_edit_category", [SubCategoryController::class, "editsub"]);
     Route::post("/backend/sub_edit_category", [SubCategoryController::class, "saveeditsub"]);
-
-
-
-
-    //backend routes
-    // Route::get("/admin_login", [BackenSetup::class, "adminlogin"]);
+                        // === This is Sub category end === //
 
 
 
 
 
-    // admin panle routes
-    Route::get("/backend", [BackenSetup::class, "setup"]);
+
+
+                        // === this is post section start === //
 
     // post list
-    Route::get("/backend/all_post_list", [BackenSetup::class, "allpost"]);
+    Route::get("/backend/all_post_list", [PostController::class, "allpost"]);
 
-    //recyle bin posts
-    Route::get("/backend/recovry_post", [BackenSetup::class, "recovrypost"]);
+    //recyle bin posts                             // later we will work on it
+    // Route::get("/backend/recovry_post", [PostController::class, "recovrypost"]);
 
-    // this is for crate post 
-    Route::get("backend/create_post", [BackenSetup::class, "createpost"]);
-    Route::post("backend/create_post/data", [BackenSetup::class, "showdata"]);
+    // this is for crate post
+    Route::get("backend/create_post", [PostController::class, "createpost"]);
+    Route::post("backend/create_post/data", [PostController::class, "savepost"]);
 
     // this is for edit the post
-    Route::get("backend/edit_post", [BackenSetup::class, "editpost"]);
-    Route::post("backend/edit_post/data", [BackenSetup::class, "editdata"]);
+    Route::get("backend/edit_post/{id}", [PostController::class, "editpost"]);
+    Route::post("backend/edit_post/{id}", [PostController::class, "editdata"]);
 
 
-    
+    // delete post
+    Route::get("backend/delete_post/{id}", [PostController::class, "delete_post"]);
+
+                        // === this is post section start === //
+
+
+
+
+
+
+                        // === this is gallery section start === //
 
 
     // gallery
@@ -125,7 +143,18 @@ Route::middleware('auth')->group(function () {
     Route::get("/backend/gallery/gallery", [GalleryController::class, "gallery_gallery"]);
     //gallery/feature //post
     Route::post("/backend/gallery/gallery", [GalleryController::class, "gallery_post_gallery"]);
-    
+
+
+                        // === this is gallery section end === //
+    //backend routes
+    // Route::get("/admin_login", [BackenSetup::class, "adminlogin"]);
+
+
+
+
+
+    // admin panle routes
+    Route::get("/backend", [BackenSetup::class, "setup"]);
 
 
 
@@ -133,7 +162,10 @@ Route::middleware('auth')->group(function () {
 
 
 
-    // commented 
+
+
+
+    // commented
     Route::get("/backend/comment_list", [BackenSetup::class, "cmtlist"]);
 });
 

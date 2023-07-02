@@ -1,4 +1,4 @@
-<x-header />
+<x-header :category="$category" />
 
 <main id="main">
     <section>
@@ -117,6 +117,5 @@
     </section>
 
   </main><!-- End #main -->
+  <x-footer :footerrec="$footerrec" :category="$category"/>
 
-
-<x-footer />

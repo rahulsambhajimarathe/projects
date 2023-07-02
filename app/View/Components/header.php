@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -11,9 +12,13 @@ class header extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $category;
+
+    public function __construct($category)
     {
         //
+
+        $this->category = $category;
     }
 
     /**

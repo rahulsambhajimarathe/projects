@@ -20,8 +20,8 @@
                 <ul>
                     <li><a href="{{url('/')}}/backend/all_post_list">All post</a></li>
                     <li><a href="{{url('/')}}/backend/create_post">Create post</a></li>
-                    <li><a href="{{url('/')}}/backend/edit_post">Edit post</a></li>
-                    <li><a href="{{url('/')}}/backend/recovry_post">Recovry post</a></li>
+                    <!-- <li><a href="{{url('/')}}/backend/edit_post">Edit post</a></li> -->
+                    <!-- <li><a href="{{url('/')}}/backend/recovry_post">Recovry post</a></li> -->
                 </ul>
             </li>
 
@@ -102,7 +102,7 @@
                 <a href="{{url('/')}}/backend/gallery" aria-expanded="false">
                     <div class="ti-gallery">
                         comments this gallery img
-                         <img src="/img/menu-icon/5.svg" alt> 
+                         <img src="/img/menu-icon/5.svg" alt>
                     </div>
                     <div class="nav_title">
                         <span>gallery</span>
@@ -119,7 +119,7 @@
                         <span>tags</span>
                     </div>
                 </a>
-            </li> 
+            </li>
 
             <!-- this is settin -->
             <li class>
@@ -133,6 +133,7 @@
                 </a>
                 <ul>
                     <li><a href="{{url('/')}}/backend/admin_info">admin info</a></li>
+                    <li><a href="{{url('/')}}/logout">Logoust</a></li>
                     <!-- <li><a href="{{url('/')}}/backend/admin_info">Change passowrd</a></li> -->
                     <!-- <li><a href="{{url('/')}}/backend/admin_info">admin info</a></li>
                     <li><a href="{{url('/')}}/backend/admin_info">admin info</a></li> -->
@@ -156,8 +157,8 @@
                         <span>Frontend</span>
                     </div>
                 </a>
-            </li> 
-            
+            </li>
+
             <!-- this is dropdown list
             <li class>
                 <a class="has-arrow" href="/#" aria-expanded="false">

@@ -1,4 +1,5 @@
-<x-header />
+<x-header :category="$category" />
+
 <main id="main">
     <section id="contact" class="contact mb-5">
       <div class="container" data-aos="fade-up">
@@ -66,4 +67,6 @@
     </section>
 
   </main><!-- End #main -->
-<x-footer />
+
+
+<x-footer :footerrec="$footerrec" :category="$category"/>

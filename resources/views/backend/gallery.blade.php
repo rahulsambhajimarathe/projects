@@ -37,89 +37,60 @@
                 <div class="card_box box_shadow position-relative mb_30">
                     <div class="white_box_tittle">
                         <div class="main-title2">
-                            <h4 class="mb-2 nowrap ">Gallery </h4>
+                            <h4 class="mb-2 nowrap ">Feature </h4>
                         </div>
                     </div>
-                    <pre>
-                    </pre>
-                    @foreach ($one as $two)
-                        <img src="{{asset('storage/uploads/feature/')}}/1687340548-blog-Rahul.jpg" class="img-fluid rounded-top w-25" alt="">
-                    @endforeach
                     <div class="box_body">
                         <div class="row photo_gallery justify-content-center" itemscope>
+                        @foreach ($data as $all)
                             <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/1.jpg" itemprop="thumbnail" alt="Image description">
+                                <img class="img-thumbnail w-100 " src="{{asset('/storage/image/feature/')}}/{{$all['name']}}" itemprop="thumbnail" alt="Image description">
                                 <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
+                                    <div class="col-8 ">Name : {{$all['name']}}</div>
                                     <div class="col-4">Delete <i class="ti-trash"></i></div>
                                 </div>
                             </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
+                            @endforeach
+
+                            <!-- <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
                                 <img class="img-thumbnail" src="/img/tilt/2.jpg" itemprop="thumbnail" alt="Image description">
                                 <div class="row p-3">
                                     <div class="col-8 ">Name : /img/tilt/1.jpg</div>
                                     <div class="col-4">Delete <i class="ti-trash"></i></div>
                                 </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/3.jpg" itemprop="thumbnail" alt="Image description">
-                                <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
-                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/4.jpg" itemprop="thumbnail" alt="Image description">
-                                <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
-                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/5.jpg" itemprop="thumbnail" alt="Image description">
-                                <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
-                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/6.jpg" itemprop="thumbnail" alt="Image description">
-                                <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
-                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/7.jpg" itemprop="thumbnail" alt="Image description">
-                                <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
-                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/1.jpg" itemprop="thumbnail" alt="Image description">
-                                <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
-                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/4.jpg" itemprop="thumbnail" alt="Image description">
-                                <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
-                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
-                                </div>
-                            </figure>
-                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
-                                <img class="img-thumbnail" src="/img/tilt/3.jpg" itemprop="thumbnail" alt="Image description">
-                                <div class="row p-3">
-                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
-                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
-                                </div>
-                            </figure>
+                            </figure> -->
                         </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-12">
+                <div class="card_box box_shadow position-relative mb_30">
+                    <div class="white_box_tittle">
+                        <div class="main-title2">
+                            <h4 class="mb-2 nowrap ">Gallery </h4>
+                        </div>
+                    </div>
+                    <div class="box_body">
+                        <div class="row photo_gallery justify-content-center" itemscope>
+                        @foreach ($gallery as $all)
+                            <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
+                                <img class="img-thumbnail w-100 " src="{{asset('/storage/image/gallery/')}}/{{$all['name']}}" itemprop="thumbnail" alt="Image description">
+                                <div class="row p-3">
+                                    <div class="col-8 ">Name : {{$all['name']}}</div>
+                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
+                                </div>
+                            </figure>
+                            @endforeach
 
+                            <!-- <figure class="col-lg-4 col-md-6 mb_30" itemprop="associatedMedia" itemscope>
+                                <img class="img-thumbnail" src="/img/tilt/2.jpg" itemprop="thumbnail" alt="Image description">
+                                <div class="row p-3">
+                                    <div class="col-8 ">Name : /img/tilt/1.jpg</div>
+                                    <div class="col-4">Delete <i class="ti-trash"></i></div>
+                                </div>
+                            </figure> -->
+                        </div>
                     </div>
                 </div>
             </div>

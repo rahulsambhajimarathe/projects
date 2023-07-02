@@ -11,9 +11,13 @@ class footer extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+
+    public $footerrec;
+    public $category;
+    public function __construct($footerrec, $category)
     {
-        //
+        $this->category = $category;
+        $this->footerrec = $footerrec;
     }
 
     /**

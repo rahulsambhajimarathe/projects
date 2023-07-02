@@ -5,12 +5,12 @@
         <div class="container">
 
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <h3 class="footer-heading">About ZenBlog</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ab, perspiciatis beatae autem deleniti voluptate nulla a dolores, exercitationem eveniet libero laudantium recusandae officiis qui aliquid blanditiis omnis quae. Explicabo?</p>
                     <p><a href="about.html" class="footer-link-more">Learn More</a></p>
                 </div>
-                <div class="col-6 col-lg-2">
+                <!-- <div class="col-6 col-lg-2">
                     <h3 class="footer-heading">Navigation</h3>
                     <ul class="footer-links list-unstyled">
                         <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
@@ -20,18 +20,13 @@
                         <li><a href="about.html"><i class="bi bi-chevron-right"></i> About us</a></li>
                         <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="col-6 col-lg-2">
                     <h3 class="footer-heading">Categories</h3>
                     <ul class="footer-links list-unstyled">
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Business</a></li>
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Culture</a></li>
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Sport</a></li>
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Food</a></li>
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Politics</a></li>
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Celebrity</a></li>
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Startups</a></li>
-                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Travel</a></li>
+                        @foreach ($category as $all)
+                            <li><a href="/category/{{ $all['cat_name'] }}"><i class="bi bi-chevron-right"></i> {{ $all['cat_name'] }}</a></li>
+                        @endforeach
 
                     </ul>
                 </div>
@@ -40,17 +35,19 @@
                     <h3 class="footer-heading">Recent Posts</h3>
 
                     <ul class="footer-links footer-blog-entry list-unstyled">
-                        <li>
-                            <a href="single-post.html" class="d-flex align-items-center">
-                                <img src="assets/img/post-sq-1.jpg" alt="" class="img-fluid me-3">
-                                <div>
-                                    <div class="post-meta d-block"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                                    <span>5 Great Startup Tips for Female Founders</span>
-                                </div>
-                            </a>
-                        </li>
+                        @foreach ($footerrec as $all)
+                            <li>
+                                <a href="/latest-post/{{$all['slug']}}" class="d-flex align-items-center">
+                                    <img src="{{asset('/storage/image/feature/')}}/{{$all['featureImages']}}" alt="" class="img-fluid me-3">
+                                    <div>
+                                        <div class="post-meta d-block"><span class="date">{{ $all["category"] }}</span> <span class="mx-1">&bullet;</span> <span>{{ $all["date"] }}2</span></div>
+                                        <span>{{ $all["title"] }}</span>
+                                    </div>
+                                </a>
+                            </li>
+                            @endforeach
 
-                        <li>
+                        <!-- <li>
                             <a href="single-post.html" class="d-flex align-items-center">
                                 <img src="assets/img/post-sq-2.jpg" alt="" class="img-fluid me-3">
                                 <div>
@@ -78,7 +75,7 @@
                                     <span>How to Avoid Distraction and Stay Focused During Video Calls?</span>
                                 </div>
                             </a>
-                        </li>
+                        </li> -->
 
                     </ul>
 
@@ -127,14 +124,14 @@
 <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="{{asset('/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('/assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('/assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{asset('/assets/vendor/aos/aos.js')}}"></script>
+    <script src="{{asset('/assets/vendor/php-email-form/validate.js')}}"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('/assets/js/main.js')}}"></script>
 
 <!-- Template Main JS File -->
 </body>

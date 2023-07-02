@@ -293,4 +293,5 @@
 </main><!-- End #main -->
 
 
-<x-footer />
+
+<x-footer :footerrec="$footerrec" :category="$category"/>
